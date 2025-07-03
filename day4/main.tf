@@ -13,6 +13,13 @@ resource "aws_subnet" "sub2" {
   depends_on = [ aws_vpc.mynewvpc ]
 }
 
+resource "aws_subnet" "sub3" {
+  
+  vpc_id = aws_vpc.mynewvpc.id
+  cidr_block = "10.0.3.0/24"
+  depends_on = [ aws_vpc.mynewvpc ]
+}
+
 
 
 
